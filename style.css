@@ -1,0 +1,61 @@
+/* ==========================================
+   RELIQUARY: THE "ANTI-DESIGN" MANIFESTO
+   ========================================== */
+* { box-sizing: border-box; }
+
+body {
+    background-color: #fff;
+    color: #000;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* W+K staple: Bold, functional, stark */
+    font-weight: 800;
+    padding: 3rem;
+    line-height: 0.9;
+}
+
+.site-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* THE TAG: Logo as a stamped icon */
+.logo-asset {
+    display: block;
+    margin: 0 auto 5rem auto; /* Centers the logo and gives it breathing room */
+    height: 18rem;            /* Cranked up for maximum impact */
+    width: auto;
+    mix-blend-mode: multiply;
+}
+
+/* THE MANIFESTO: The headline is the only thing that matters */
+.hero-text {
+    font-size: clamp(4rem, 12vw, 10rem);
+    text-transform: uppercase;
+    letter-spacing: -0.04em;
+    margin-bottom: 8rem;
+    max-width: 15ch;
+    text-align: center; /* This forces the text to be perfectly balanced */
+    margin: 0 auto 8rem auto; /* This centers the block itself on the page */
+}
+
+/* THE GRID: Unapologetically brutal */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    border-top: 4px solid #000;
+    padding-top: 2rem;
+}
+
+.column-title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+/* THE INQUIRY: Stamped into the page */
+.inquiry-block {
+    background: #000;
+    color: #fff;
+    padding: 4rem;
+    margin-top: 8rem;
+}
