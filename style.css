@@ -64,29 +64,73 @@ body {
    MOBILE HARDENING (Fixing the "Smush")
    ========================================== */
 @media (max-width: 600px) {
-    body { padding: 1rem; }
+    /* Reset and Container */
+    body { 
+        padding: 0; 
+        margin: 0; 
+    }
     
-    .site-container { padding: 1.5rem; }
+    .site-container { 
+        padding: 1.5rem; 
+        max-width: 100%; 
+        box-sizing: border-box;
+    }
 
-    /* Fixes the text size so it doesn't look puny */
+    /* Manifesto Hero */
     .hero-text {
-        font-size: 3rem; 
-        margin-bottom: 3rem;
+        font-size: 4rem; 
+        line-height: 0.9;
+        margin: 0 0 4rem 0;
+        text-align: left; 
     }
 
-    /* Forces the grid to stack vertically so it isn't "smushy" */
+    /* The grid divider */
     .content-grid {
-        grid-template-columns: 1fr;
+        border-top: 2px solid #000;
+        padding-top: 2rem;
         gap: 2rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        
+        /* THE BLEED FIX: Force the top line to the edges */
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 
-    /* Makes the form block feel intentional again */
+    /* Full-Bleed Inquiry Block */
     .inquiry-block {
-        padding: 2rem;
         margin-top: 4rem;
+        margin-left: -1.5rem;   /* Negative margin matches site-container padding */
+        margin-right: -1.5rem;  /* Negative margin matches site-container padding */
+        padding: 3rem 1.5rem;   /* Internal padding keeps content readable */
+        background: #000;
+        color: #fff;
     }
 
     .inquiry-block h2 {
         font-size: 2rem !important;
+        margin-bottom: 1.5rem !important;
+        color: #fff !important;
+    }
+
+    /* Form Fields - Heavy and Industrial */
+    input, textarea {
+        display: block;
+        width: 100% !important;
+        border: 2px solid #fff !important;
+        padding: 1rem !important;
+        margin-bottom: 1rem !important;
+        box-sizing: border-box; 
+        background: transparent;
+        color: #fff;
+        font-family: inherit;
+        font-size: 1rem;
+    }
+
+    button[type="submit"] {
+        width: 100% !important;
+        margin-top: 1rem;
     }
 }
