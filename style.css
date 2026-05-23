@@ -59,3 +59,34 @@ body {
     padding: 4rem;
     margin-top: 8rem;
 }
+
+/* ==========================================
+   MOBILE HARDENING (Fixing the "Smush")
+   ========================================== */
+@media (max-width: 600px) {
+    body { padding: 1rem; }
+    
+    .site-container { padding: 1.5rem; }
+
+    /* Fixes the text size so it doesn't look puny */
+    .hero-text {
+        font-size: 3rem; 
+        margin-bottom: 3rem;
+    }
+
+    /* Forces the grid to stack vertically so it isn't "smushy" */
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* Makes the form block feel intentional again */
+    .inquiry-block {
+        padding: 2rem;
+        margin-top: 4rem;
+    }
+
+    .inquiry-block h2 {
+        font-size: 2rem !important;
+    }
+}
